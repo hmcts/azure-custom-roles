@@ -4,7 +4,7 @@ Repository used for the creation of Custom RBAC Roles in Azure Access Policies (
 
 ## Usage
 
-All Custom Roles will be created at the root tenant level and so are assignable at all levels across management groups, subscriptions & individual resources.
+All Custom Roles will be created at the HMCTS Managaement Group level and so are assignable at all child management groups, subscriptions & individual resources.
 
 To create a new role, edit the ./components/custom_roles/role_definitions.yaml file
 
