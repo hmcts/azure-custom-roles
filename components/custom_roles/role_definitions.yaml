@@ -13,7 +13,8 @@ roles:
     description: "Custom role for DocumentDB with specific permissions"
     permissions:
       actions:
-        - "Microsoft.DocumentDB/databaseAccounts/readMetadata"
+        - "Microsoft.DocumentDB/databaseAccounts/read"
+        - "Microsoft.DocumentDB/databaseAccounts/write"
         - "Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/*"
         - "Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/items/*"
       not_actions: []
