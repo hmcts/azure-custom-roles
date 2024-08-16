@@ -1,6 +1,6 @@
 - name: Orphan Resource Cleanup Read/Delete
   description: Read and Resource Delete Access to applicably assigned scope
-  scope: "providers/Microsoft.Management/managementGroups/HMCTS"
+  scope: "/providers/Microsoft.Management/managementGroups/HMCTS"
   permissions:
     actions:
       - "*/read"
