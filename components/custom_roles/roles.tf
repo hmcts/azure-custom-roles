@@ -8,8 +8,7 @@ resource "azurerm_role_definition" "custom_roles" {
 
   name        = each.value.name
   description = each.value.description
-  scope       = "/providers/Microsoft.Management/managementGroups/HMCTS"
-
+  scope       = each.value.scope
   permissions {
     actions          = each.value.permissions.actions
     not_actions      = each.value.permissions.not_actions
