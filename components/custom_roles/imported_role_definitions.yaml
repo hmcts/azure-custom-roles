@@ -1,0 +1,79 @@
+- name: Application Gateway Backend Health Reader
+  id: /subscriptions/8cbc6f36-7c56-4963-9d36-739db5d00b27/providers/Microsoft.Authorization/roleDefinitions/cc6362c6-ec1a-ce79-4c72-714b539002af
+  description: View backend health on the Application Gateway
+  scope: "/providers/Microsoft.Management/managementGroups/HMCTS"
+  assignableScopes: "/providers/Microsoft.Management/managementGroups/HMCTS"
+  permissions:
+    actions:
+      - "Microsoft.Network/applicationGateways/backendhealth/action"
+    not_actions: []
+    data_actions: []
+    not_data_actions: []
+- name: Azure Policy Manager
+  id: /subscriptions/04d27a32-7a07-48b3-95b8-3c8691e1a263/providers/Microsoft.Authorization/roleDefinitions/cee696ad-cae8-166d-5931-bf8edcaad8a1
+  description: Role for the Azure Policy Manager to manage policies and to be able to list subscriptions so that it can kick off the policy compliance check
+  scope: "/providers/Microsoft.Management/managementGroups/HMCTS"
+  assignableScopes: "/providers/Microsoft.Management/managementGroups/HMCTS"
+  permissions:
+    actions:
+      - "Microsoft.Authorization/policyassignments/*"
+      - "Microsoft.Authorization/policydefinitions/*"
+      - "Microsoft.Authorization/policyexemptions/*"
+      - "Microsoft.Authorization/policysetdefinitions/*"
+      - "Microsoft.PolicyInsights/*"
+      - "Microsoft.Support/*"
+      - "Microsoft.Management/register/action"
+      - "Microsoft.Management/managementGroups/subscriptions/read"
+      - "Microsoft.Management/managementGroups/read"
+    not_actions: []
+    data_actions: []
+    not_data_actions: []
+- name: Security Operator
+  id: /subscriptions/04d27a32-7a07-48b3-95b8-3c8691e1a263/providers/Microsoft.Authorization/roleDefinitions/bd9b6901-40d7-4483-9dc9-d6ddd99f83b3
+  description: Allows dismissing and creating alerts
+  scope: "/providers/Microsoft.Management/managementGroups/HMCTS"
+  assignableScopes: "/providers/Microsoft.Management/managementGroups/HMCTS"
+  permissions:
+    actions:
+      - "Microsoft.Security/locations/tasks/resolve/action"
+      - "Microsoft.Security/locations/tasks/dismiss/action"
+      - "Microsoft.Security/locations/alerts/dismiss/action"
+      - "Microsoft.Security/locations/alerts/activate/action"
+      - "Microsoft.Security/locations/alerts/read"
+      - "Microsoft.Security/locations/alerts/resolve/action"
+      - "Microsoft.Security/locations/alerts/simulate/action"
+      - "Microsoft.Security/locations/tasks/start/action"
+      - "Microsoft.Security/locations/tasks/activate/action"
+      - "Microsoft.Security/locations/tasks/read"
+      - "Microsoft.Security/alertsSuppressionRules/write"
+      - "Microsoft.Security/alertsSuppressionRules/read"
+      - "Microsoft.Security/alertsSuppressionRules/delete"
+    data_actions:
+    not_data_actions:
+- name: KubecostRole
+  id: /subscriptions/04d27a32-7a07-48b3-95b8-3c8691e1a263/providers/Microsoft.Authorization/roleDefinitions/25297bd8-e6d2-461a-8bd8-bd224a7d37c4
+  description: Rate Card query role
+  scope: "/providers/Microsoft.Management/managementGroups/HMCTS"
+  assignableScopes: "/providers/Microsoft.Management/managementGroups/HMCTS"
+  permissions:
+    actions:
+      - "Microsoft.Compute/virtualMachines/vmSizes/read"
+      - "Microsoft.Resources/subscriptions/locations/read"
+      - "Microsoft.Resources/providers/read"
+      - "Microsoft.ContainerService/containerServices/read"
+      - "Microsoft.Commerce/RateCard/read"
+    not_actions: []
+    data_actions: []
+    not_data_actions: []
+- name: Orphan Resource Cleanup Read/Delete
+  id: /subscriptions/04d27a32-7a07-48b3-95b8-3c8691e1a263/providers/Microsoft.Authorization/roleDefinitions/02e598af-dab5-5dba-d4f2-dbef1f5b734a
+  description: Read and Resource Delete Access to applicably assigned scope
+  scope: "/providers/Microsoft.Management/managementGroups/HMCTS"
+  assignableScopes: "/providers/Microsoft.Management/managementGroups/HMCTS"
+  permissions:
+    actions:
+      - "*/read"
+      - "Microsoft.Resources/*/delete"
+    not_actions: []
+    data_actions: []
+    not_data_actions: []
