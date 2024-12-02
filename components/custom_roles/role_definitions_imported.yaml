@@ -13,7 +13,7 @@
     not_data_actions: []
 - name: Azure Policy Manager
   id: /providers/Microsoft.Authorization/roleDefinitions/39c041aa-f45a-4dcc-9e8b-39671978c884|/providers/Microsoft.Management/managementGroups/HMCTS
-  description: Role for the Azure Policy Manager to manage policies and to be able to list subscriptions so that it can kick off the policy compliance check
+  description: "Role for the Azure Policy Manager to manage policies and to be able to list subscriptions so that it can kick off the policy compliance check "
   scope: "/providers/Microsoft.Management/managementGroups/HMCTS"
   assignableScopes: [
     "/providers/Microsoft.Management/managementGroups/HMCTS"
