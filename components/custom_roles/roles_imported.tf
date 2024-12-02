@@ -1,5 +1,5 @@
 locals {
-  imported_role_definitions = yamldecode(file("${path.cwd}/role_definitions.yaml"))
+  imported_role_definitions = yamldecode(file("${path.cwd}/role_definitions_imported.yaml"))
 }
 
 import {
