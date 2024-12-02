@@ -54,8 +54,9 @@
       - "Microsoft.Security/alertsSuppressionRules/write"
       - "Microsoft.Security/alertsSuppressionRules/read"
       - "Microsoft.Security/alertsSuppressionRules/delete"
-    data_actions:
-    not_data_actions:
+    not_actions: []
+    data_actions: []
+    not_data_actions: []
 - name: KubecostRole
   id: /providers/Microsoft.Authorization/roleDefinitions/25297bd8-e6d2-461a-8bd8-bd224a7d37c4|/providers/Microsoft.Management/managementGroups/HMCTS
   description: Rate Card query role
