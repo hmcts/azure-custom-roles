@@ -19,8 +19,8 @@ resource "azurerm_role_definition" "imported_custom_roles" {
 
   permissions {
     actions          = each.value.permissions.actions
-    not_actions      = each.value.permissions.not_actions
     data_actions     = each.value.permissions.data_actions
     not_data_actions = each.value.permissions.not_data_actions
+    not_actions      = each.value.permissions.not_actions
   }
 }
