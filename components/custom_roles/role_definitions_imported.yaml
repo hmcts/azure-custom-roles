@@ -74,17 +74,3 @@
     not_actions: []
     data_actions: []
     not_data_actions: []
-- name: Orphan Resource Cleanup Read/Delete
-  id: /providers/Microsoft.Authorization/roleDefinitions/02e598af-dab5-5dba-d4f2-dbef1f5b734a|/providers/Microsoft.Management/managementGroups/HMCTS
-  description: Read and Resource Delete Access to applicably assigned scope
-  scope: "/providers/Microsoft.Management/managementGroups/HMCTS"
-  assignableScopes: [
-    "/providers/Microsoft.Management/managementGroups/HMCTS"
-  ]
-  permissions:
-    actions:
-      - "*/read"
-      - "Microsoft.Resources/*/delete"
-    not_actions: []
-    data_actions: []
-    not_data_actions: []
