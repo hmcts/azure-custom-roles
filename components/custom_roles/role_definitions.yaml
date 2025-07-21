@@ -20,3 +20,13 @@
     not_actions:
     data_actions:
     not_data_actions:
+- name: Azure Storage Account Blob Tagging
+  description: Allow reading and writing tags on blobs in storage accounts
+  scope: "/providers/Microsoft.Management/managementGroups/HMCTS"
+  permissions:
+    actions:
+      - "Microsoft.Storage/storageAccounts/blobServices/containers/blobs/tags/write"
+      - "Microsoft.Storage/storageAccounts/blobServices/containers/blobs/tags/read"
+    not_actions:
+    data_actions:
+    not_data_actions:
