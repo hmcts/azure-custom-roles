@@ -25,8 +25,8 @@
   scope: "/providers/Microsoft.Management/managementGroups/HMCTS"
   permissions:
     actions:
-      - "Microsoft.Storage/storageAccounts/blobServices/containers/blobs/tags/write"
-      - "Microsoft.Storage/storageAccounts/blobServices/containers/blobs/tags/read"
     not_actions:
     data_actions:
+      - "Microsoft.Storage/storageAccounts/blobServices/containers/blobs/tags/write"
+      - "Microsoft.Storage/storageAccounts/blobServices/containers/blobs/tags/read"
     not_data_actions:
