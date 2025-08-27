@@ -5,6 +5,8 @@
     actions:
       - "*/read"
       - "Microsoft.Resources/*/delete"
+      - "Microsoft.Compute/disks/delete"
+
     not_actions:
     data_actions:
     not_data_actions:
