@@ -32,3 +32,19 @@
       - "Microsoft.Storage/storageAccounts/blobServices/containers/blobs/tags/write"
       - "Microsoft.Storage/storageAccounts/blobServices/containers/blobs/tags/read"
     not_data_actions:
+- name: PIM Azure Contributor
+  description: A role that users can activate via PIM to provide contributor access
+  scope: "/providers/Microsoft.Management/managementGroups/HMCTS"
+  permissions:
+    actions:
+      - "*"
+    not_actions:
+      - "Microsoft.Authorization/*/Delete"
+      - "Microsoft.Authorization/*/Write"
+      - "Microsoft.Authorization/elevateAccess/Action"
+      - "Microsoft.Blueprint/blueprintAssignments/write"
+      - "Microsoft.Blueprint/blueprintAssignments/delete"
+      - "Microsoft.Compute/galleries/share/action"
+    data_actions:
+      - "*"
+    not_data_actions:
