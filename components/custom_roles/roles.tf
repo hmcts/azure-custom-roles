@@ -11,7 +11,6 @@ resource "azurerm_role_definition" "custom_roles" {
   scope             = each.value.scope
   assignable_scopes = each.value.assignableScopes
 
-
   permissions {
     actions          = each.value.permissions.actions
     not_actions      = each.value.permissions.not_actions
