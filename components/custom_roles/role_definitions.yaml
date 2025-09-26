@@ -1,50 +1,64 @@
 - name: Orphan Resource Cleanup Read/Delete
   description: Read and Resource Delete Access to applicably assigned scope
   scope: "/providers/Microsoft.Management/managementGroups/HMCTS"
+  assignableScopes: [
+    "/providers/Microsoft.Management/managementGroups/HMCTS"
+  ]
   permissions:
     actions:
       - "*/read"
       - "Microsoft.Resources/*/delete"
       - "Microsoft.Compute/disks/delete"
-
-    not_actions:
-    data_actions:
-    not_data_actions:
+    not_actions: []
+    data_actions: []
+    not_data_actions: []
 - name: Azure Policy Resource Group and Security Automation
   description: Allow Azure Policy MI to create resources
   scope: "/providers/Microsoft.Management/managementGroups/HMCTS"
+  assignableScopes: [
+    "/providers/Microsoft.Management/managementGroups/HMCTS"
+  ]
   permissions:
     actions:
       - "Microsoft.Resources/subscriptions/resourceGroups/write"
       - "Microsoft.Resources/subscriptions/resourceGroups/read"
       - "Microsoft.Security/automations/write"
       - "Microsoft.Security/automations/read"
-    not_actions:
-    data_actions:
-    not_data_actions:
+    not_actions: []
+    data_actions: []
+    not_data_actions: []
 - name: Azure Storage Account Blob Tagging
   description: Allow reading and writing tags on blobs in storage accounts
   scope: "/providers/Microsoft.Management/managementGroups/HMCTS"
+  assignableScopes: [
+    "/providers/Microsoft.Management/managementGroups/HMCTS"
+  ]
   permissions:
-    actions:
-    not_actions:
+    actions: []
+    not_actions: []
     data_actions:
       - "Microsoft.Storage/storageAccounts/blobServices/containers/blobs/tags/write"
       - "Microsoft.Storage/storageAccounts/blobServices/containers/blobs/tags/read"
-    not_data_actions:
+    not_data_actions: []
 - name: Azure Contributor Role minus deletes
   description: Allow all standard contributor access minus any delete actions
   scope: "/providers/Microsoft.Management/managementGroups/HMCTS"
+  assignableScopes: [
+    "/providers/Microsoft.Management/managementGroups/HMCTS"
+  ]
   permissions:
     actions:
       - "*"
     not_actions:
       - "*/delete"
-    data_actions:
-    not_data_actions:
+    data_actions: []
+    not_data_actions: []
 - name: PIM Azure Contributor
   description: A role that users can activate via PIM to provide contributor access
   scope: "/providers/Microsoft.Management/managementGroups/HMCTS"
+  assignableScopes: [
+    "/providers/Microsoft.Management/managementGroups/HMCTS"
+  ]
   permissions:
     actions:
       - "*"
@@ -57,4 +71,4 @@
       - "Microsoft.Compute/galleries/share/action"
     data_actions:
       - "*"
-    not_data_actions:
+    not_data_actions: []
