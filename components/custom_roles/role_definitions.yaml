@@ -51,6 +51,7 @@
       - "*"
     not_actions:
       - "*/delete"
+      - "Microsoft.Authorization/*/write"
     data_actions: []
     not_data_actions: []
 - name: PIM Azure Contributor
