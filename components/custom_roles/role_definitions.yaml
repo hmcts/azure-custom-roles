@@ -88,13 +88,13 @@
     - "/subscriptions/17390ec1-5a5e-4a20-afb3-38d8d726ae45" # DTS-HERITAGE-INTSVC-PROD
     - "/subscriptions/bf308a5c-0624-4334-8ff8-8dca9fd43783" # DCD-CFT-Sandbox
     - "/subscriptions/a8140a9e-f1b0-481f-a4de-09e2ee23f7ab" # DTS-SHAREDSERVICES-SBOX
-    # Virtual networks containing delegated subnets for PostgreSQL
-    - "/subscriptions/5ca62022-6aa2-4cee-aaa7-e7536c8d566c/resourceGroups/ss-prod-network-rg/providers/Microsoft.Network/virtualNetworks/ss-prod-vnet"
-    - "/subscriptions/a8140a9e-f1b0-481f-a4de-09e2ee23f7ab/resourceGroups/ss-sbox-network-rg/providers/Microsoft.Network/virtualNetworks/ss-sbox-vnet"
-    - "/subscriptions/8cbc6f36-7c56-4963-9d36-739db5d00b27/resourceGroups/cft-prod-network-rg/providers/Microsoft.Network/virtualNetworks/cft-prod-vnet"
-    - "/subscriptions/b72ab7b7-723f-4b18-b6f6-03b0f2c6a1bb/resourceGroups/cft-sbox-network-rg/providers/Microsoft.Network/virtualNetworks/cft-sbox-vnet"
-    # Private DNS zones for PostgreSQL Flexible Server
-    - "/subscriptions/1baf5470-1c3e-40d3-a6f7-74bfbce4b348/resourceGroups/core-infra-intsvc-rg/providers/Microsoft.Network/privateDnsZones/private.postgres.database.azure.com"
+    # Resource groups containing VNets with delegated subnets for PostgreSQL
+    - "/subscriptions/5ca62022-6aa2-4cee-aaa7-e7536c8d566c/resourceGroups/ss-prod-network-rg"
+    - "/subscriptions/a8140a9e-f1b0-481f-a4de-09e2ee23f7ab/resourceGroups/ss-sbox-network-rg"
+    - "/subscriptions/8cbc6f36-7c56-4963-9d36-739db5d00b27/resourceGroups/cft-prod-network-rg"
+    - "/subscriptions/b72ab7b7-723f-4b18-b6f6-03b0f2c6a1bb/resourceGroups/cft-sbox-network-rg"
+    # Resource group containing private DNS zones for PostgreSQL Flexible Server
+    - "/subscriptions/1baf5470-1c3e-40d3-a6f7-74bfbce4b348/resourceGroups/core-infra-intsvc-rg"
   permissions:
     actions:
       - "Microsoft.DBforPostgreSQL/flexibleServers/read"
