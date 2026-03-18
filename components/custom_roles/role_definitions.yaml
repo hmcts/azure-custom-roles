@@ -104,10 +104,10 @@
   ]
   permissions:
     actions:
-      - "microsoft.app/containerApps/logstream/action"
       - "microsoft.app/containerapps/authtoken/action"
       - "microsoft.app/containerapps/getauthtoken/action"
-      - "Microsoft.App/containerApps/read"
+      - "microsoft.app/containerapps/read"
     not_actions: []
-    data_actions: []
+    data_actions:
+      - "microsoft.app/containerApps/logstream/action"
     not_data_actions: []
