@@ -85,13 +85,10 @@
   ]
   permissions:
     actions:
-      - "Microsoft.DBforPostgreSQL/flexibleServers/read"
+      - "*/read"
       - "Microsoft.DBforPostgreSQL/flexibleServers/write"
       - "Microsoft.Network/virtualNetworks/subnets/join/action"
-      - "Microsoft.Network/virtualNetworks/subnets/read"
-      - "Microsoft.Network/privateDnsZones/read"
       - "Microsoft.Network/privateDnsZones/join/action"
-      - "Microsoft.Network/privateDnsZones/virtualNetworkLinks/read"
     not_actions: []
     data_actions: []
     not_data_actions: []
