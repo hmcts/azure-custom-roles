@@ -92,7 +92,7 @@
     not_actions: []
     data_actions: []
     not_data_actions: []
-- name: Backup Vault Restore Operator - VM
+- name: Recovery Services Vault Restore Operator - VM
   description: >
     Grants permissions required to restore a Virtual Machine from an Azure Recovery
     Services Vault (RSV). Covers recovery point discovery, disk restore (OriginalLocation
