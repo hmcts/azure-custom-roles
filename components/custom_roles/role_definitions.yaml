@@ -98,8 +98,9 @@
     Services Vault (RSV). Covers recovery point discovery, disk restore (OriginalLocation
     and AlternateLocation), VM power operations for in-place replace, and ILR file mount.
     Storage and vault read operations are covered by the */read action. VM write,
-    resource group linked-scope write, storage account management-plane write, and
-    network join operations are granted explicitly for non-ILR restore methods.
+    resource group linked-scope write, staging storage account management-plane
+    write and listKeys, and network join operations are granted explicitly for
+    non-ILR restore methods (per Azure Backup RBAC requirements for VM/disk restore).
     Storage Blob Data Contributor may still be assigned separately via scoped role
     assignment on the staging storage account when direct blob data-plane access is
     required by a workflow.
@@ -115,6 +116,7 @@
       - "Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers/protectedItems/recoveryPoints/revokeInstantItemRecovery/action"
       - "Microsoft.Resources/subscriptions/resourceGroups/write"
       - "Microsoft.Storage/storageAccounts/write"
+      - "Microsoft.Storage/storageAccounts/listkeys/action"
       - "Microsoft.Compute/virtualMachines/powerOff/action"
       - "Microsoft.Compute/virtualMachines/deallocate/action"
       - "Microsoft.Compute/virtualMachines/start/action"
