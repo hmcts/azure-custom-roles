@@ -143,3 +143,18 @@
     data_actions:
       - "microsoft.app/containerApps/logstream/action"
     not_data_actions: []
+- name: API Management Subscription Key Reader
+  description: >
+    Grants permissions required to read subscription keys from API Management.
+  scope: "/providers/Microsoft.Management/managementGroups/HMCTS"
+  assignableScopes: [
+    "/providers/Microsoft.Management/managementGroups/HMCTS"
+  ]
+  permissions:
+    actions:
+      - "Microsoft.ApiManagement/service/read"
+      - "Microsoft.ApiManagement/service/subscriptions/read"
+      - "Microsoft.ApiManagement/service/subscriptions/listSecrets/action"
+    not_actions: []
+    data_actions: []
+    not_data_actions: []
